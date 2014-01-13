@@ -4,6 +4,7 @@ set -x LC_COLLATE "POSIX"
 
 # styling
 set fish_theme bobthefish
+
 . $fish_path/oh-my-fish.fish
 
 function fish_right_prompt
@@ -15,6 +16,9 @@ end
 function fish_greeting
   
 end
+
+# plugins
+#set fish_plugins rake
 
 # rubymotion functions
 function ripad
@@ -53,6 +57,9 @@ end
 
 # PATH vars
 set PATH usr/local/bin $PATH
+
+# Android
+set PATH /Applications/AndroidSDK/sdk/tools $PATH
 
 
 # rbenv shims
