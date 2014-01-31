@@ -1,6 +1,7 @@
 set fish_path $HOME/.oh-my-fish
 set -x LANG "en_US.UTF-8"
 set -x LC_COLLATE "POSIX"
+set -x GOPATH $HOME/go
 
 # styling
 set fish_theme bobthefish
@@ -57,6 +58,10 @@ end
 
 # PATH vars
 set PATH usr/local/bin $PATH
+
+# Android
+set PATH /Applications/AndroidSDK/sdk/tools $PATH
+set PATH /Applications/AndroidSDK/sdk/platform-tools $PATH
 
 # rbenv shims
 set PATH $HOME/.rbenv/bin $PATH
