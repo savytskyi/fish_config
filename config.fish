@@ -63,6 +63,9 @@ set PATH usr/local/bin $PATH
 set PATH /Applications/AndroidSDK/sdk/tools $PATH
 set PATH /Applications/AndroidSDK/sdk/platform-tools $PATH
 
+# Go
+set PATH $GOPATH/bin $PATH
+
 # rbenv shims
 set PATH $HOME/.rbenv/bin $PATH
 set PATH $HOME/.rbenv/shims $PATH
