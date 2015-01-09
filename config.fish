@@ -2,6 +2,15 @@ set fish_path $HOME/.oh-my-fish
 set -x LANG "en_US.UTF-8"
 set -x LC_COLLATE "POSIX"
 set -x GOPATH $HOME/go
+set -x MONGO_PATH /usr/local/mongodb
+
+set -x DOCKER_HOST tcp://192.168.59.103:2376
+set -x DOCKER_TLS_VERIFY 1
+set -x DOCKER_CERT_PATH /Users/k/.boot2docker/certs/boot2docker-vm
+
+# Rubymotion for Android:
+set -x RUBYMOTION_ANDROID_SDK ~/Documents/android/sdk
+set -x RUBYMOTION_ANDROID_NDK ~/Documents/android/ndk
 
 # styling
 set fish_theme bobthefish
@@ -23,7 +32,7 @@ end
 
 # rubymotion functions
 function ripad
-  rake device_family=ipad
+  rake device_name="iPad Air"
 end
 
 function rdebug
@@ -32,6 +41,11 @@ end
 
 function rtf
   rake testflight notes="$argv"
+end
+
+# Open in Sublime Text
+function s
+  /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $argv
 end
 
 # git functions
@@ -70,3 +84,6 @@ set PATH $GOPATH/bin $PATH
 set PATH $HOME/.rbenv/bin $PATH
 set PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
+
+# mongodb
+set PATH $MONGO_PATH/bin $PATH
