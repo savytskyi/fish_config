@@ -67,15 +67,19 @@ function v
 end
 
 function p3
-  python3
+  python3 $argv
+end
+
+function dj
+  python3 manage.py $argv
 end
 
 # PATH vars
 set PATH usr/local/bin $PATH
 
 # Android
-set PATH /Applications/AndroidSDK/sdk/tools $PATH
-set PATH /Applications/AndroidSDK/sdk/platform-tools $PATH
+set PATH ~/Documents/android/sdk/tools $PATH
+set PATH ~/Documents/android/sdk/platform-tools $PATH
 
 # Go
 set PATH $GOPATH/bin $PATH
