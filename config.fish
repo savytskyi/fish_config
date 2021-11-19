@@ -3,16 +3,14 @@
 # 2. make sure you have correct fishfile: ~/.config/fish/fishfile
 # 3. run `fisher` to install all dependencies from fishfile
 
-# General config
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /home/ky/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
 set -x LANG "en_US.UTF-8"
 set -x LC_COLLATE "POSIX"
 
-# rbenv
-status --is-interactive; and source (rbenv init -|psub)
-
-###
-### Prompt config
-###
 
 # Show date in the right side of the line
 function fish_right_prompt
@@ -43,4 +41,16 @@ end
 
 function gp
   git push origin master
+end
+
+function inst
+  sudo apt-get install $argv
+end
+
+function xb
+  echo 'Set Brightness from 0.0 to 1.0'
+  xrandr --output HDMI-0 --brightness $argv
+  xrandr --output DP-1 --brightness $argv
+  xrandr --output HDMI-1 --brightness $argv
+  xrandr --output DP-2 --brightness $argv
 end
