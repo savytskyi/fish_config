@@ -11,6 +11,8 @@ eval /home/ky/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 set -x LANG "en_US.UTF-8"
 set -x LC_COLLATE "POSIX"
 
+# NVM:
+export NVM_DIR="~/.nvm"
 
 # Show date in the right side of the line
 function fish_right_prompt
