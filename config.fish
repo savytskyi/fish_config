@@ -49,10 +49,26 @@ function inst
   sudo apt-get install $argv
 end
 
+function upd
+  sudo apt-get update
+end
+
+function upgr
+  sudo apt-get update ; sudo apt-get upgrade
+end
+
 function xb
   echo 'Set Brightness from 0.0 to 1.0'
   xrandr --output HDMI-0 --brightness $argv
   xrandr --output DP-1 --brightness $argv
   xrandr --output HDMI-1 --brightness $argv
   xrandr --output DP-2 --brightness $argv
+end
+
+function py_forever -a path -a file
+  cd $path
+  conda activate tfg
+  while true
+    python $file
+  end
 end
