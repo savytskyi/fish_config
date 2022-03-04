@@ -14,6 +14,11 @@ set -x LC_COLLATE "POSIX"
 # NVM:
 export NVM_DIR="~/.nvm"
 
+# Spicetify
+export SPICETIFY_INSTALL="/home/ky/.spicetify"
+export PATH="$SPICETIFY_INSTALL:$PATH"
+
+
 # Show date in the right side of the line
 function fish_right_prompt
   set_color $fish_color_autosuggestion[1]
@@ -54,7 +59,7 @@ function upd
 end
 
 function upgr
-  sudo apt-get update ; sudo apt-get upgrade
+  sudo apt-get update ; sudo apt-get upgrade --with-new-pkgs ; sudo apt autoremove
 end
 
 function xb
